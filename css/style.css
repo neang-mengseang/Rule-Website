@@ -16,6 +16,9 @@ body{font-family:Barlow, 'Barlow Condensed', Inter, Arial, Helvetica, sans-serif
 .brand-logo{max-height:56px;display:inline-block}
 .site-nav a{margin-left:1rem;color:var(--muted);text-decoration:none;padding:.45rem .6rem;border-radius:6px}
 .site-nav a:hover{background:rgba(40,85,138,0.06);color:var(--brand)}
+.site-nav a.active{background:var(--brand);color:#fff}
+.site-nav a:focus,
+.site-nav a:focus-visible{outline:3px solid rgba(40,85,138,0.12);outline-offset:3px}
 .nav-toggle{display:none;background:none;border:0;font-size:1.6rem}
 .hero{background:linear-gradient(90deg, #f6f9ff, #ffffff);padding:4rem 0;text-align:center}
 .hero{position:relative;min-height:380px;display:flex;align-items:center}
@@ -153,6 +156,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);b
 .cta-section h2{color:var(--brand);margin-bottom:1rem}
 @media(max-width:720px){
   .site-nav{display:none}
+  .site-nav.open{display:block}
   .nav-toggle{display:inline-block}
   .hero{min-height:320px;padding:2.5rem 0}
   .content-grid{grid-template-columns:1fr;gap:2rem}
